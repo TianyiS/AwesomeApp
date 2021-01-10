@@ -16,38 +16,42 @@ const Tab = createBottomTabNavigator();
 
 const HomeTabNavigator = (props) => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            tabBarOptions={{
+                activeTintColor: '#f15454',
+            }}
+        >
             <Tab.Screen name={'Explore'} component={ExploreNavigator} options={
-                {tabBarIcon: () => (
-                    <Fontisto name='search' size={25} color={'#f15454'} />
+                {tabBarIcon: ({color}) => (
+                    <Fontisto name='search' size={25} color={color} />
                 )}
                }
             />
 
             <Tab.Screen name={'Saved'} component={HomeScreen} options={
-                {tabBarIcon: () => (
-                    <FontAwesome name='heart-o' size={25} color={'#f15454'} />
+                {tabBarIcon: ({color}) => (
+                    <FontAwesome name='heart-o' size={25} color={color} />
                 )}
                }
             />
 
             <Tab.Screen name={'Airbnb'} component={HomeScreen} options={
-                {tabBarIcon: () => (
-                    <FontAwesome5 name='airbnb' size={25} color={'#f15454'} />
+                {tabBarIcon: ({color}) => (
+                    <FontAwesome5 name='airbnb' size={25} color={color} />
                 )}
                }
             />
 
             <Tab.Screen name={'Messages'} component={HomeScreen} options={
-                {tabBarIcon: () => (
-                    <Feather name='message-square' size={25} color={'#f15454'} />
+                {tabBarIcon: ({color}) => (
+                    <Feather name='message-square' size={25} color={color} />
                 )}
                }
             />
 
             <Tab.Screen name={'Profile'} component={HomeScreen} options={
-                {tabBarIcon: () => (
-                    <EvilIcons name='user' size={25} color={'#f15454'} />
+                {tabBarIcon: ({color}) => (
+                    <EvilIcons name='user' size={25} color={color} />
                 )}
                }
             />
