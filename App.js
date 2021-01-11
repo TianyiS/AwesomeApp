@@ -12,26 +12,17 @@ import {
   StatusBar,
 } from 'react-native';
 
-import HomeScreen from './src/screens/home';
-import SearchResultScreen from './src/screens/searchResult';
-import DestinationSearchScreen from './src/screens/destinationSearch';
-import GuestsScreen from './src/screens/guests';
 import Router from './src/navigation/router';
+import { withAuthenticator } from 'aws-amplify-react-native'
 
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      {/* <SafeAreaView> */}
-        {/* <HomeScreen></HomeScreen> */}
-        {/* <SearchResultScreen></SearchResultScreen> */}
-        {/* <DestinationSearchScreen /> */}
-        {/* <GuestsScreen></GuestsScreen> */}
-      {/* </SafeAreaView> */}
       <Router />
     </>
   );
 };
 
-export default App;
+export default withAuthenticator(App);
