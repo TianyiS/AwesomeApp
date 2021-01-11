@@ -4,6 +4,7 @@ import HomeScreen from '../screens/home';
 import ExploreNavigator from './exploreNavigator';
 import SearchResultMapScreen from '../screens/searchResultMap';
 import PostScreen from '../screens/postScreen';
+import ProfileScreen from '../screens/profile';
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -49,7 +50,7 @@ const HomeTabNavigator = (props) => {
                }
             />
 
-            <Tab.Screen name={'Profile'} component={HomeScreen} options={
+            <Tab.Screen name={'Profile'} component={ProfileScreen} options={
                 {tabBarIcon: ({color}) => (
                     <EvilIcons name='user' size={25} color={color} />
                 )}
