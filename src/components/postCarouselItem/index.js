@@ -13,7 +13,7 @@ const PostCarouselItem = (props) => {
     }
 
     return (
-        <Pressable onPress={() => console.warn('clicked')} style={[styles.container,{width: width - 60}]}>
+        <Pressable onPress={goToPostPage} style={[styles.container,{width: width - 60}]}>
             <View style={styles.innerContainer}>
                 <Image style={styles.image} source={{url: post.image}}/>
 

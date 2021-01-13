@@ -84,7 +84,7 @@ mutation createAccomodation4 {
 
 mutation createAccomodation5 {
   createPost(input: {
-    image: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/5.jpg",
+    image: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
     type: "Garage",
     title: "Steve Jobs Garage",
     description: "The OG Garage where Steve Jobs started Apple",

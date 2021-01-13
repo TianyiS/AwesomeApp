@@ -13,7 +13,7 @@ const Post = (props) => {
     }
 
     return (
-        <Pressable onPress={() => console.warn('clicked')} style={styles.container}>
+        <Pressable onPress={goToPostPage} style={styles.container}>
             <Image style={styles.image} source={{url: post.image}}/>
 
             <Text style={styles.bedrooms}>{post.bed} bed {post.bedroom} bedroom</Text>

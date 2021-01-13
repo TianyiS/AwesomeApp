@@ -1,1 +1,1 @@
-Clone Airbnb app from sratch.
+Clone Airbnb app from scratch.
