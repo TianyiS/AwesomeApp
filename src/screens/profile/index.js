@@ -9,11 +9,11 @@ const ProfileScreen = (props) => {
     }
 
     return (
-        <View style={{height: '100%', justifyContent: 'center', alignItems: 'center'}}>
+        <View style={{height: '195%', justifyContent: 'center', alignItems: 'center'}}>
             <Pressable style={{
                 width: '100%',
                 height: 40,
-                backgroundColor: '#c3c3c3',
+                backgroundColor: '#EC7211',
                 justifyContent: 'center',
                 alignItems: 'center',
             }}
