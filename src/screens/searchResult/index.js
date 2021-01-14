@@ -7,7 +7,7 @@ import { listPosts } from '../../graphql/queries';
 
 const SearchResultScreen = (props) => {
     console.log(props);
-    const { guests } = props;
+    const { guests, viewport } = props;
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -16,8 +16,17 @@ const SearchResultScreen = (props) => {
                 const postsResult = await API.graphql (
                     graphqlOperation(listPosts, {
                         filter : {
-                            maxGuests: {
-                                ge: guests
+                            and : {
+                                maxGuests: {
+                                    ge: guests
+                                },
+                                latitude: {
+                                    between: [viewport.southwest.lat, viewport.northeast.lat]
+                                }, 
+                                longitude: {
+                                    between: [viewport.southwest.lng, viewport.northeast.lng]
+                                }
+                                
                             }
                         }
                     })

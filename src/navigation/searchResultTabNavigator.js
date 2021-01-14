@@ -9,7 +9,7 @@ const Tab = createMaterialTopTabNavigator();
 const SearchResultTabNavigator = (props) => {
     const route = useRoute();
     // console.log(route);
-    const { guests } = route.params;
+    const { guests, viewport } = route.params;
 
     return (
         <Tab.Navigator tabBarOptions={{
@@ -20,12 +20,12 @@ const SearchResultTabNavigator = (props) => {
         }}>
             <Tab.Screen name={'list'} >
                 {() => (
-                    <SearchResultScreen guests={guests}/>
+                    <SearchResultScreen guests={guests} viewport={viewport}/>
                 )}
             </Tab.Screen>
             <Tab.Screen name={'map'} >
                 {() => (
-                    <SearchResultMapScreen guests={guests}/>
+                    <SearchResultMapScreen guests={guests} viewport={viewport}/>
                 )}            
             </Tab.Screen>
 
